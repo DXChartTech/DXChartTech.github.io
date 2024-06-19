@@ -1,25 +1,65 @@
-- title: Documentation
-  url: docs
+# - title: "1.DXChart 시작하기"
+#   url: "docs/DxChart준비하기/DxChart_준비하기"
+#   links:
+#     - title: "Getting Started"
+#       url: "docs/getting-started"
+#       children:
+#         - title: Features
+#           url: "docs/getting-started#getting-started"
+#         - title: Development
+#           url: "docs/getting-started#development"
+#         - title: Customization
+#           url: "docs/getting-started#customization"
+#     - title: Versioning
+#       url: "docs/versioning"
+#     - title: "About"
+#       url: "about"
+#     - title: "News"
+#       url: "news"
+- title: "1.DXChart 시작하기"
+  url: ""
   links:
-    - title: "Getting Started"
-      url: "docs/getting-started"
+    - title: "1.1 DxChart 준비하기"
+      url: "docs/DxChart준비하기/DxChart_준비하기"
       children:
-        - title: Features
-          url: "docs/getting-started#getting-started"
-        - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
-    - title: Versioning
-      url: "docs/versioning"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"
-- title: "Extras"
-  url: "docs/extras"
-  links:
-    - title: Quizzes
-      url: "docs/extras/example-quiz"
-    - title: Tags Page
-      url: "tags"
+        - title: "1.1.1 Nexacro Project 만들기"
+          url: "docs/DxChart준비하기/DxChart_준비하기#nexacro-project-만들기"
+        - title: "1.1.2 차트모듈 설치하기"
+          url: "docs/DxChart준비하기/DxChart_준비하기#차트모듈-설치하기"
+        - title: "1.1.3 샘플화면 만들기"
+          url: "docs/DxChart준비하기/DxChart_준비하기#샘플화면-만들기"
+        - title: "1.1.4 차트함수 만들기"
+          url: "docs/DxChart준비하기/DxChart_준비하기#차트함수-만들기"
+    - title: "2.1 DxChart 구성요소"
+      url: "docs/DxChart준비하기/DxChart_준비하기#차트-구성요소"
+      children:
+        - title: "2.1.1 DxChart 구성요소 용어"
+          url: "docs/DxChart준비하기/DxChart_준비하기#구성요소-용어-설명"
+        - title: "2.1.2 DxChart 데이터 형식"
+          url: "docs/DxChart준비하기/DxChart_준비하기#데이터-형식"
+
+
+- title: "2.DXChart 설정하기"
+  url: "docs/DxChart속성/DxChart_속성"
+
+- title: "3.DXChart Effect 설정하기"
+  url: "docs/DxChartEffect설정하기/DxChart_Effect설정하기"
+
+- title: "4.DXChart MultiChart"
+  url: "docs/DxChart MultiChart/DxChart MultiChart설정하기"
+
+- title: "5.DXChart 기타기능"
+  url: "docs/DxChart기타기능/DxChart_기타기능"
+
+  # links:
+  #     - title: "DXChart 준비하기"
+  #       url: "docs/DxChart준비하기/DxChart_준비하기"
+  #    - title: "DXChart 함수 만들기"
+  #       url: "docs/DxChart준비하기/DxChart_준비하기"
+  # - title: "Extras"
+  #   url: "docs/extras"
+  #   links:
+  #     - title: Quizzes
+  #       url: "docs/extras/example-quiz"
+  #     - title: Tags Page
+  #       url: "tags"
