@@ -1,35 +1,107 @@
-<script
-  src="{{ site.baseurl }}/assets/js/jquery-3.3.1/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8= sha256-T+aPohYXbm0fRYDpJLr+zJ9RmYTswGsahAoIsNiMld4="
-  crossorigin="anonymous"></script>
+<script src="{{ site.baseurl }}/assets/js/jquery-3.3.1/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 
 <script>
 $(document).ready(function() {
-
     var toc = $('#TOC');
 
-    // Select each header
-    sections = $('.td-content h1');
-        $.each(sections, function(idx, v) {
-            section = $(v);
-            var div_id = $(section).attr('id');
-            var div_text = section.text().split('¶')[0];
-            var parent = $("#" + div_id)
-            var content = '<li id="link_' + div_id + '" class="md-nav__item"><a class="md-nav__link" href="#' + div_id + '" title="' + div_text +'">' + div_text +'</a></li>';
-            $(toc).append(content);
+    // Select each header and generate the table of contents
+    var sections = $('.td-content h1');
+    $.each(sections, function(idx, v) {
+        var section = $(v);
+        var div_id = section.attr('id');
+        var div_text = section.text().split('¶')[0];
+        var content = '<li id="link_' + div_id + '" class="md-nav__item"><a class="md-nav__link" href="#' + div_id + '" title="' + div_text + '">' + div_text + '</a></li>';
+        toc.append(content);
 
-            // Add section code to subnavigation
-            var children = $('<nav class="md-nav"><ul class="md-nav__list"></nav></ul>')
-            var contenders = $("#" + div_id).nextUntil("h1");
-            $.each(contenders, function(idx, contender){
-               if($(contender).is('h2') || $(contender).is('h3')) {
-                   var contender_id = $(contender).attr('id');
-                   var contender_text = $(contender).text().split('¶')[0];
-                   var content = '<li class="md-nav__item"><a class="md-nav__link" href="#' + contender_id + '" title="' + contender_text +'">' + contender_text +'</a></li>';
-                   children.append(content);
-                }
-             })
-             $("#link_" + div_id).append(children);
+        // Add section code to subnavigation
+        var children = $('<nav class="md-nav"><ul class="md-nav__list"></ul></nav>');
+        var contenders = $("#" + div_id).nextUntil("h1");
+        $.each(contenders, function(idx, contender) {
+            if ($(contender).is('h2') || $(contender).is('h3')) {
+                var contender_id = $(contender).attr('id');
+                var contender_text = $(contender).text().split('¶')[0];
+                var content = '<li class="md-nav__item"><a class="md-nav__link" href="#' + contender_id + '" title="' + contender_text + '">' + contender_text + '</a></li>';
+                children.find('ul').append(content);
+            }
         });
+        $("#link_" + div_id).append(children);
     });
+
+    // Add click event handler to menu links
+    toc.on('click', '.md-nav__link', function(e) {
+        e.preventDefault();
+
+        // Remove active class from all links
+        $('.md-nav__link').removeClass('active');
+
+        // Add active class to the clicked link
+        $(this).addClass('active');
+
+        // Scroll to the section
+        var target = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(target).offset().top
+        }, 500);
+    });
+
+    // Intersection Observer
+    var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var id = entry.target.id;
+                $('.md-nav__link').removeClass('active');
+                $('[href="#' + id + '"]').addClass('active');
+            }
+        });
+    }, options);
+
+    // Observe each section
+    sections.each(function() {
+        observer.observe(this);
+    });
+
+    // Also observe h2 and h3 elements
+    $('h2, h3').each(function() {
+        observer.observe(this);
+    });
+
+    // Initial highlighting on page load
+    var fromTop = $(window).scrollTop();
+    var cur = sections.map(function() {
+        if ($(this).offset().top <= fromTop + 60)
+            return this;
+    });
+    cur = cur[cur.length - 1];
+    var id = cur && cur.length ? cur[0].id : "";
+    if (id) {
+        menuLinks.removeClass('active').filter('[href="#' + id + '"]').addClass('active');
+    }
+});
 </script>
+
+<style>
+.md-nav__item {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.md-nav__link {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px;
+}
+
+.md-nav__link.active {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+</style>

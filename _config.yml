@@ -40,20 +40,20 @@ defaults:
   - scope:
       path: "_docs"
       type: "docs"
-    values:
-      layout: page
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      path: "posts"
-      type: "posts"
-    values:
-      layout: "post"
+    # values:
+    #   layout: page
+  # -
+  #   scope:
+  #     path: ""
+  #     type: "pages"
+  #   values:
+  #     layout: "page"
+  # -
+  #   scope:
+  #     path: "posts"
+  #     type: "posts"
+  #   values:
+  #     layout: "post"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

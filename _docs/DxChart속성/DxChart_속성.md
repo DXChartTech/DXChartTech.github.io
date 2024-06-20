@@ -3,7 +3,7 @@ title: DXChart 속성설정
 description:
 ---
 
-<link rel="stylesheet" type="text/css" href="../index.css">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/index.css">
 
 
 
@@ -1314,185 +1314,183 @@ options: {
 
 차트의 Background를 설정합니다.
 
-![Background](../../assets/img/image45.png)
+  ![Background](../../assets/img/image45.png)
 
 **Properties**
-
-<table style="border-collapse: collapse; width: 100%; margin: auto;">
-  <thead>
-    <tr>
-      <th style="border: 1px solid black; padding: 10px;">Sub property</th>
-      <th style="border: 1px solid black; padding: 10px;">설명</th>
-      <th style="border: 1px solid black; padding: 10px;">타입</th>
-      <th style="border: 1px solid black; padding: 10px;">기본값</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">BarsColor1</td>
-      <td style="border: 1px solid black; padding: 10px;">배경에서 막대의 가로 색상을 지정합니다. 지정한 색이 홀수 번째에 반복됩니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">string</td>
-      <td style="border: 1px solid black; padding: 10px;">rgba(0,0,0,0)</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">BarsColor2</td>
-      <td style="border: 1px solid black; padding: 10px;">배경에서 막대의 가로 색상을 지정합니다. 지정한 색이 짝수 번째에 반복됩니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">string</td>
-      <td style="border: 1px solid black; padding: 10px;">rgba(0,0,0,0)</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">BarsCount</td>
-      <td style="border: 1px solid black; padding: 10px;">배경의 막대 개수를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">Color</td>
-      <td style="border: 1px solid black; padding: 10px;">차트의 여백을 제외한 배경 색을 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">Grid</td>
-      <td style="border: 1px solid black; padding: 10px;">배경에 그리드를 표시할 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">number</td>
-      <td style="border: 1px solid black; padding: 10px;">1</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridAutofit</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 픽셀 너비/높이를 지정하는 대신 자동 맞춤을 사용할 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridAutofitAlign</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드 autofit을 사용했을 때 정렬을 사용할 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridBorder</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드 주위에 테두리를 그릴지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridColor</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 색을 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">string</td>
-      <td style="border: 1px solid black; padding: 10px;">#dddddd</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridDashed</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드를 대시(-) 형태로 표현할 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">FALSE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridDotted</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드를 점(.) 형태로 표현할 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">FALSE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridHlines</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 가로 선을 그릴지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridHlinesCount</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 가로 선 수를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">number</td>
-      <td style="border: 1px solid black; padding: 10px;">5</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridHsize</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 가로 크기를 지정합니다. backgroundGridAutofit 옵션이 false일 때만 동작합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">number</td>
-      <td style="border: 1px solid black; padding: 10px;">25</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridLineWidth</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드 선의 두께를 지정합니다. 소수점도 허용됩니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">number</td>
-      <td style="border: 1px solid black; padding: 10px;">1</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridThreedYaxis</td>
-      <td style="border: 1px solid black; padding: 10px;">3D 차트를 그렸을 때 배경 그리드가 Y축으로 확장할 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </<tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridVlines</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 세로 선을 그릴지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">GridVsize</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 세로 크기를 지정합니다. backgroundGridAutofit 옵션이 false일 때만 동작합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">number</td>
-      <td style="border: 1px solid black; padding: 10px;">25</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">Hbars</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 그리드의 특정 위치에 특정 크기의 가로 막대를 지정합니다. 첫 번째 값은 데이터 범위 내에 있어야 표시됩니다. 두 번째 값은 크기를 지정하며 마지막 값은 색을 지정합니다. []안에 ,로 구분하여 여러 막대를 여러 위치에 그릴 수 있습니다. background : {Hbars : [[70, 10, 'yellow'], [120, 20, 'blue']]}</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">[]</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">Image</td>
-      <td style="border: 1px solid black; padding: 10px;">배경에 사용할 이미지를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageAlign</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지를 정렬을 지정합니다. top, bottom, left, right 등을 기본적으로 사용 가능하며 top left, bottom right 등 응용도 가능합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageAlpha</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지의 투명도를 지정합니다. 0~1까지 지정할 수 있으며 작아질수록 투명해집니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">number</td>
-      <td style="border: 1px solid black; padding: 10px;">1</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageH</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지의 높이를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageStretch</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지가 차트에 맞게 확장될 지 여부입니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">boolean</td>
-      <td style="border: 1px solid black; padding: 10px;">TRUE</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageW</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지의 길이를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageX</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지의 가로 좌표를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-    <tr>
-      <td style="border: 1px solid black; padding: 10px;">ImageY</td>
-      <td style="border: 1px solid black; padding: 10px;">배경 이미지의 세로 좌표를 지정합니다.</td>
-      <td style="border: 1px solid black; padding: 10px;">object</td>
-      <td style="border: 1px solid black; padding: 10px;">null</td>
-    </tr>
-  </tbody>
-</table>
-
+  <table style="border-collapse: collapse; width: 100%; margin: auto;">
+    <thead>
+      <tr>
+        <th style="border: 1px solid black; padding: 10px;">Sub property</th>
+        <th style="border: 1px solid black; padding: 10px;">설명</th>
+        <th style="border: 1px solid black; padding: 10px;">타입</th>
+        <th style="border: 1px solid black; padding: 10px;">기본값</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">BarsColor1</td>
+        <td style="border: 1px solid black; padding: 10px;">배경에서 막대의 가로 색상을 지정합니다. 지정한 색이 홀수 번째에 반복됩니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">string</td>
+        <td style="border: 1px solid black; padding: 10px;">rgba(0,0,0,0)</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">BarsColor2</td>
+        <td style="border: 1px solid black; padding: 10px;">배경에서 막대의 가로 색상을 지정합니다. 지정한 색이 짝수 번째에 반복됩니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">string</td>
+        <td style="border: 1px solid black; padding: 10px;">rgba(0,0,0,0)</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">BarsCount</td>
+        <td style="border: 1px solid black; padding: 10px;">배경의 막대 개수를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">Color</td>
+        <td style="border: 1px solid black; padding: 10px;">차트의 여백을 제외한 배경 색을 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">Grid</td>
+        <td style="border: 1px solid black; padding: 10px;">배경에 그리드를 표시할 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">number</td>
+        <td style="border: 1px solid black; padding: 10px;">1</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridAutofit</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 픽셀 너비/높이를 지정하는 대신 자동 맞춤을 사용할 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridAutofitAlign</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드 autofit을 사용했을 때 정렬을 사용할 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridBorder</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드 주위에 테두리를 그릴지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridColor</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 색을 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">string</td>
+        <td style="border: 1px solid black; padding: 10px;">#dddddd</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridDashed</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드를 대시(-) 형태로 표현할 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">FALSE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridDotted</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드를 점(.) 형태로 표현할 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">FALSE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridHlines</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 가로 선을 그릴지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridHlinesCount</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 가로 선 수를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">number</td>
+        <td style="border: 1px solid black; padding: 10px;">5</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridHsize</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 가로 크기를 지정합니다. backgroundGridAutofit 옵션이 false일 때만 동작합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">number</td>
+        <td style="border: 1px solid black; padding: 10px;">25</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridLineWidth</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드 선의 두께를 지정합니다. 소수점도 허용됩니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">number</td>
+        <td style="border: 1px solid black; padding: 10px;">1</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridThreedYaxis</td>
+        <td style="border: 1px solid black; padding: 10px;">3D 차트를 그렸을 때 배경 그리드가 Y축으로 확장할 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridVlines</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 세로 선을 그릴지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">GridVsize</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 세로 크기를 지정합니다. backgroundGridAutofit 옵션이 false일 때만 동작합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">number</td>
+        <td style="border: 1px solid black; padding: 10px;">25</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">Hbars</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 그리드의 특정 위치에 특정 크기의 가로 막대를 지정합니다. 첫 번째 값은 데이터 범위 내에 있어야 표시됩니다. 두 번째 값은 크기를 지정하며 마지막 값은 색을 지정합니다. []안에 ,로 구분하여 여러 막대를 여러 위치에 그릴 수 있습니다. background : {Hbars : [[70, 10, 'yellow'], [120, 20, 'blue']]}</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">[]</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">Image</td>
+        <td style="border: 1px solid black; padding: 10px;">배경에 사용할 이미지를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageAlign</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지를 정렬을 지정합니다. top, bottom, left, right 등을 기본적으로 사용 가능하며 top left, bottom right 등 응용도 가능합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageAlpha</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지의 투명도를 지정합니다. 0~1까지 지정할 수 있으며 작아질수록 투명해집니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">number</td>
+        <td style="border: 1px solid black; padding: 10px;">1</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageH</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지의 높이를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageStretch</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지가 차트에 맞게 확장될 지 여부입니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">boolean</td>
+        <td style="border: 1px solid black; padding: 10px;">TRUE</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageW</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지의 길이를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageX</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지의 가로 좌표를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid black; padding: 10px;">ImageY</td>
+        <td style="border: 1px solid black; padding: 10px;">배경 이미지의 세로 좌표를 지정합니다.</td>
+        <td style="border: 1px solid black; padding: 10px;">object</td>
+        <td style="border: 1px solid black; padding: 10px;">null</td>
+      </tr>
+    </tbody>
+  </table>
 
 
 #### Background Grid 속성
@@ -1530,20 +1528,20 @@ Background 색상 지정 가능합니다.
 ![BackgroundColor](../../assets/img/image47.png)
 
 ```javascript
-var bar = new DxChartBar({
-    id: cvs,
-    elem: canvas,
-    binddataset: this.Dataset00,
-    data: ["bind:total", "bind:man", "bind:woman"],
-    options: {
-        // 기본적인 설정은 Basic 예제와 동일합니다
-        background: {
-            Color: "#333", // BackGroud Color를 설정합니다.
-            GridVlines: false, // Grid의 수직 선을 미설정합니다
-            GridBorder: true // Grid Border를 설정합니다.
-        }
-    }
-}).draw();
+  var bar = new DxChartBar({
+      id: cvs,
+      elem: canvas,
+      binddataset: this.Dataset00,
+      data: ["bind:total", "bind:man", "bind:woman"],
+      options: {
+          // 기본적인 설정은 Basic 예제와 동일합니다
+          background: {
+              Color: "#333", // BackGroud Color를 설정합니다.
+              GridVlines: false, // Grid의 수직 선을 미설정합니다
+              GridBorder: true // Grid Border를 설정합니다.
+          }
+      }
+  }).draw();
 ```
 
 #### Background Image 설정하기

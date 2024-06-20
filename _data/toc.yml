@@ -30,17 +30,37 @@
           url: "docs/DxChart준비하기/DxChart_준비하기#샘플화면-만들기"
         - title: "1.1.4 차트함수 만들기"
           url: "docs/DxChart준비하기/DxChart_준비하기#차트함수-만들기"
-    - title: "2.1 DxChart 구성요소"
+    - title: "1.2 DxChart 구성요소"
       url: "docs/DxChart준비하기/DxChart_준비하기#차트-구성요소"
       children:
-        - title: "2.1.1 DxChart 구성요소 용어"
+        - title: "1.2.1 DxChart 구성요소 용어"
           url: "docs/DxChart준비하기/DxChart_준비하기#구성요소-용어-설명"
-        - title: "2.1.2 DxChart 데이터 형식"
+        - title: "1.2.2 DxChart 데이터 형식"
           url: "docs/DxChart준비하기/DxChart_준비하기#데이터-형식"
 
-
-- title: "2.DXChart 설정하기"
+- title: "2.DXChart 속성 설정하기"
   url: "docs/DxChart속성/DxChart_속성"
+  links:
+    - title: "2.1 Margin 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#margin-옵션---margin-그룹"
+    - title: "2.2 Text 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#text-property-예제"
+    - title: "2.3 제목 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#제목-옵션-title-그룹"
+    - title: "2.4 X축 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#x축-옵션-xaxis-그룹"
+    - title: "2.5 Y축 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#y축-옵션-yaxis-그룹"
+    - title: "2.6 Background 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#background-설정하기"
+    - title: "2.7 Label 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#label-설정하기"
+    - title: "2.8 범례 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#범례-설정하기"
+    - title: "2.9 툴팁 설정하기"
+      url: "docs/DxChart속성/DxChart_속성#툴팁-설정하기"
+
+
 
 - title: "3.DXChart Effect 설정하기"
   url: "docs/DxChartEffect설정하기/DxChart_Effect설정하기"
