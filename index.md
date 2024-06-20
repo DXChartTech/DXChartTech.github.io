@@ -2,11 +2,13 @@
 layout: home
 ---
 
-# DXChart 튜토리얼
----
 
+
+<h1> DXChart 튜토리얼</h1>
+<hr/>
 <div class="toc-columns">
-  
+
+
   <div class="toc-column">
   
     <h3><a href="docs/DxChart준비하기/DxChart_준비하기">1. DXChart 시작하기</a></h3>
