@@ -6,13 +6,13 @@ description:
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/index.css">
 
 
-
+<!-- 
 > **DXChart 개발자 튜토리얼**
 >
 > **(Nexacro용)**
----
+--- -->
 
-**\[목 차\]**
+<!-- **\[목 차\]**
 각각의 목차를 클릭시 해당 페이지로 이동합니다
 
 
@@ -28,13 +28,30 @@ description:
    - [범례](#범례-설정하기)
    - [툴팁](#툴팁-설정하기)
   
-<br><br>
+<br><br> -->
 
-# **DxChart 속성**
+# 2. DxChart 속성
+
+<details style="padding-top: 30px;">
+<summary>[목차]</summary>
+<div markdown="1">
+   - [2.1 Margin (옵션 - margin 그룹)](#21-margin-옵션---margin-그룹)
+   - [2.2 Text 옵션](#22-text-옵션)
+   - [2.3 제목 (옵션 - title 그룹)](#23-제목-옵션-title-그룹)
+   - [2.4 X축 (옵션 - xaxis 그룹)](#24-x축-옵션-xaxis-그룹)
+   - [2.5 Y축 (옵션 - yaxis 그룹)](#25-y축-옵션----yaxis-그룹)
+   - [2.6 Background 설정하기](#26-background-설정하기)
+   - [2.7 Label 설정하기](#27-label-설정하기)
+   - [2.8 범례 설정하기](#28-범례-설정하기)
+   - [2.9 툴팁 설정하기](#29-툴팁-설정하기)
+</div>
+</details>
+
 
 ## 차트 주요 Properties
+---
 
-### Margin (옵션 - margin 그룹)
+### 2.1 Margin (옵션 - margin 그룹)
 
 ![Margin](../../assets/img/image23.png)
 
@@ -86,7 +103,6 @@ description:
   </table>
 
 
-
 #### Margin 사용 예제
 
 아래는 차트의 Margin Properties 설정하기 튜토리얼 입니다.
@@ -114,8 +130,11 @@ description:
 
 
 ```
-#### Text Property 예제
 
+
+### 2.2 Text 옵션
+---
+<!-- #### Text Property 예제 -->
 차트 내부에 렌더링 되는 모든 Text 값들의 색상, Font Style을 지정할 수
 있습니다. title, X축라벨, Y축라벨 등 모든 텍스트 값들을 제어할 수
 있습니다.
@@ -139,7 +158,8 @@ options: {
 }).draw();
 ```
 
-### 제목 (옵션 title 그룹)
+
+### 2.3 제목 (옵션 title 그룹)
 
 ![Title](../../assets/img/image27.png)
 
@@ -239,6 +259,7 @@ options: {
 
 
 
+
 #### Title Property 예제
 ![Title](../../assets/img/image28.png)
 
@@ -259,7 +280,8 @@ options: {
     }).draw();
 ```
 
-### 제목(옵션 -Subtitle)
+
+#### 제목(옵션 -Subtitle)
 
 DxChart는 Main Title 외에 차트의 부제목 또한 설정할 수 있습니다. 같은
 title Properties내에 Subtitle
@@ -305,7 +327,7 @@ title Properties내에 Subtitle
   </tr>
 </table>
 
-#### SubTitle Property 예제 
+##### SubTitle Property 예제 
 
 ![Subtitle](../../assets/img/image29.png)
 
@@ -326,9 +348,10 @@ options: {
 }).draw();
 ```
 
-### X축 (옵션 xaxis 그룹)
-
+### 2.4 X축 (옵션 xaxis 그룹)
+---
 차트의 X축에 대한 설정을 하는 Property입니다.
+
 
 ![Xaixs](../../assets/img/image30.png)
 
@@ -547,7 +570,6 @@ options: {
   </tr>
 </table>
 
-
 #### X축 Property 기본 예제
 
 ![Xaxis](../../assets/img/image32.png)
@@ -637,14 +659,14 @@ LabelsFormatter Properties는 차트의 데이터 값이나 라벨 데이터의 
 
 xaxisLabelsFormatter를 만들 때 사용할 수 있는 매크로는 다음과 같습니다.
 
-### 인덱스 매크로
+#### 인덱스 매크로
 
 > %{index}
 
 -   이 매크로는 레이블의 인덱스를 표시합니다. 자바스크립트 배열과 같이
     0부터 시작하는 점을 유의해야 합니다.
 
-### 속성 매크로
+#### 속성 매크로
 
 > %{property:myProperties\[%{index}\]}
 
@@ -653,7 +675,7 @@ xaxisLabelsFormatter를 만들 때 사용할 수 있는 매크로는 다음과 �
     있습니다. 속성 매크로 사용시, 해당 속성에 사용될 변수를 반드시
     할당하고 사용해야 합니다.
 
-### 값 매크로
+#### 값 매크로
 
 > %{value}, %{value_formatted}
 
@@ -665,7 +687,7 @@ xaxisLabelsFormatter를 만들 때 사용할 수 있는 매크로는 다음과 �
 >
 > Labels: %{index} %{value_formatted} //인덱스매크로
 
-Labels: %{property:myProperties\[%{index}\]} %{value_formatted} // 속성
+- Labels: %{property:myProperties\[%{index}\]} %{value_formatted} // 속성
 매크로
 
 > //속성 매크로 사용시 항상 프로터피 오브젝트를 생성해주어야합니다.
@@ -676,7 +698,7 @@ Labels: %{property:myProperties\[%{index}\]} %{value_formatted} // 속성
 >
 > }
 
-### 전역변수 매크로
+#### 전역변수 매크로
 
 > %{global:myVariable} %{global:myVariable\[%{index}\]}
 
@@ -684,7 +706,7 @@ Labels: %{property:myProperties\[%{index}\]} %{value_formatted} // 속성
     이를 통해 차트 객체의 속성으로 데이터를 설정하는 것보다 쉽게
     데이터를 참조할 수 있습니다.
 
-### 함수 호출 매크로
+#### 함수 호출 매크로
 
 > %{function:myFunction()} %{function:myFunction(%{index})}
 
@@ -796,7 +818,7 @@ options: {
 }).draw();
 ```
 
-### Y축 (옵션 -- yaxis 그룹)
+### 2.5 Y축 (옵션 -- yaxis 그룹)
 
 ![Yaxis](../../assets/img/image35.png)
 
@@ -1310,7 +1332,9 @@ options: {
     }
 }).draw();
 ```
-### Background 설정하기
+
+### 2.6 Background 설정하기
+---
 
 차트의 Background를 설정합니다.
 
@@ -1567,13 +1591,14 @@ var bar = new DxChartBar({
 }).draw();
 ```
 
-### Label 설정하기
+### 2.7 Label 설정하기
+---
 
 ![Label](../../assets/img/image49.png)
 
 **Properties**
 
-<table style="border-collapse: collapse; width: 80%; margin: auto;">
+<table style="border-collapse: collapse; width: 100%; margin: auto;">
   <thead>
     <tr>
       <th style="border: 1px solid black; padding: 10px; text-align: center; background-color: #f2f2f2;">Sub property</th>
@@ -1828,15 +1853,11 @@ var bar = new DxChartBar({
 }).draw();
 ```
 
-### 범례 설정하기
+### 2.8 범례 설정하기
+---
+차트의 범례를 설정합니다.
 
 ![Key](../../assets/img/image52.png)
-
-**①**
-
-**②**
-
-차트의 범례를 설정합니다.
 
 **Properties**
 
@@ -2016,11 +2037,12 @@ options: {
 }
 ```
 
-### 툴팁 설정하기
+### 2.9 툴팁 설정하기
+---
 
  ![ToolTip](../../assets/img/image53.png)
 
-<table style="border-collapse: collapse; width: 80%; margin: auto;">
+<table style="border-collapse: collapse; width: 100%; margin: auto;">
   <thead>
     <tr>
       <th style="border: 1px solid black; padding: 10px; text-align: center; background-color: #f2f2f2;">Sub property</th>
@@ -2147,7 +2169,7 @@ options: {
 
 Tooltip의 데이터를 표시하기 위해 사용하는 macro종류
 
-<table style="border-collapse: collapse; width: 80%; margin: auto;">
+<table style="border-collapse: collapse; width: 100%; margin: auto;">
   <thead>
     <tr>
       <th style="border: 1px solid black; padding: 10px; text-align: center; background-color: #f2f2f2;">macro</th>

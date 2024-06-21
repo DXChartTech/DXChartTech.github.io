@@ -3,40 +3,28 @@ title: DXChart 준비하기
 description:
 ---
 
-
-**DXChart 개발자 튜토리얼**
+<!-- **DXChart 개발자 튜토리얼**
 >
-> **(Nexacro용)**
+> **(Nexacro용)** -->
 
+# 1.1 DxChart 준비하기
 
-**\[목 차\]**
-각각의 목차를 클릭시 해당 페이지로 이동합니다
-
- [**1.** **DxChart 준비하기**](#dxchart-준비하기)
-  - [Nexacro Project 만들기](#nexacro-project-만들기)
-  - [차트모듈 설치하기](#차트모듈-설치하기)
-  - [샘플화면 만들기](#샘플화면-만들기)
-  
-[**2.** **차트함수 만들기**](#차트함수-만들기)
-
-[**3.** **차트 구성요소**](#차트-구성요소)
-- [**DxChart 준비하기**](#dxchart-준비하기)
-  - [Nexacro Project 만들기](#nexacro-project-만들기)
-  - [차트모듈 설치하기](#차트모듈-설치하기)
-  - [샘플화면 만들기](#샘플화면-만들기)
-  - [**차트함수 만들기**](#차트함수-만들기)
-- [**차트 구성요소**](#차트-구성요소)
-  - [구성요소 용어 설명](#구성요소-용어-설명)
-  - [데이터 형식](#데이터-형식)
-    - [data Property](#data-property)
-    - [binddataset Property](#binddataset-property)
+<details style="padding-top: 30px;">
+<summary>[목차]</summary>
+<div markdown="1">
+- [1.1 DXChart 준비하기](#11-dxchart-준비하기)
+  - [1.1.1 Nexacro Project 만들기](#111-nexacro-project-만들기)
+  - [1.1.2 차트모듈 설치하기](#112-차트모듈-설치하기)
+  - [1.1.3 샘플화면 만들기](#113-샘플화면-만들기)
+- [1.2 차트 구성요소](#12-차트-구성요소)
+  - [1.2.1 구성요소 용어 설명](#121-구성요소-용어-설명)
+  - [1.2.2 데이터 형식](#122-데이터-형식)
+</div>
+</details>
 
 
 
-
-# **DxChart 준비하기**
-
-## Nexacro Project 만들기
+<h2 style="padding-top: 10px;">1.1.1 Nexacro Project 만들기</h2>
 --- 
 
 차트를 사용하기 위한 테스트 프로젝트를 생성합니다.
@@ -48,6 +36,7 @@ description:
 1)  NexacroStudio를 기동합니다.
 
 2)  새로운 프로젝트를 생성합니다.
+
 
 ![생성하기](../../assets/img/image1.png)
 
@@ -70,7 +59,9 @@ description:
 
   ![완성](../../assets/img/image5.png)
 
-## 차트모듈 설치하기
+
+## 1.1.2 차트모듈 설치하기
+--- 
 
 1)  Nexacro Studio에서 [File]-[install module]을 선택합니다.
 
@@ -108,7 +99,8 @@ description:
 
   ![종료](../../assets/img/image11.png)
 
-## 샘플화면 만들기
+## 1.1.3 샘플화면 만들기
+---
 
 1)  작성할 화면을 오픈합니다. (FrameBase::Frame_Work.xfdl)
 
@@ -285,180 +277,180 @@ description:
   ![함수3](../../assets/img/image22.png)
 
 
+
+
+
+# 1.2 차트 구성요소
+
+## 1.2.1 구성요소 용어 설명
 ---
-
-
-
-# **차트 구성요소**
-
-## 구성요소 용어 설명
 
 차트의 호출형식은 아래와 같이 구성되어 있습니다.
 
-  ```javascript
-        var chart = this.chart; 
-        var canvas = chart.getCanvas(); 
-        var cvs = canvas.id;
-        DxChart.reset(canvas);
-        var bar = new DxChartBar({
-          id: cvs,
-          elem : canvas,
-          binddataset : this.Dataset00,
-          data:["bind:total","bind:man","bind:woman"],
-          options: {
-              colors: ['#FF6A8E','#42B0FF','#5DCA63'],
-              title: { Text : '1인 가구 수' },
-                xaxis: { Use : true, Labels: labels },
-                  yaxis: { Use : true,
-                    LabelsCount: 5,
-              ScaleMax: 10000000,
-              TickmarksCount: 10,
-              },
-              margin: { Left: 100, Bottom: 50, Inner : 20 },
-          }
-        }).wave();
+```javascript
+    var chart = this.chart; 
+    var canvas = chart.getCanvas(); 
+    var cvs = canvas.id;
+    DxChart.reset(canvas);
+    var bar = new DxChartBar({
+      id: cvs,
+      elem : canvas,
+      binddataset : this.Dataset00,
+      data:["bind:total","bind:man","bind:woman"],
+      options: {
+          colors: ['#FF6A8E','#42B0FF','#5DCA63'],
+          title: { Text : '1인 가구 수' },
+            xaxis: { Use : true, Labels: labels },
+              yaxis: { Use : true,
+                LabelsCount: 5,
+          ScaleMax: 10000000,
+          TickmarksCount: 10,
+          },
+          margin: { Left: 100, Bottom: 50, Inner : 20 },
+      }
+    }).wave();
 
 
 
 
-        1)  차트를 그리기 전에 차트영역을 reset해줍니다.
+    1)  차트를 그리기 전에 차트영역을 reset해줍니다.
 
-            var chart = this.chart; // Chart Object를 지정합니다.
+        var chart = this.chart; // Chart Object를 지정합니다.
 
-            var canvas = chart.getCanvas(); // canvas를 가져옵니다.
+        var canvas = chart.getCanvas(); // canvas를 가져옵니다.
 
-            var cvs = canvas.id; // cavas의 아이디
+        var cvs = canvas.id; // cavas의 아이디
 
-            DxChart.reset(canvas); // 차트영역(canvas)을 reset합니다.
+        DxChart.reset(canvas); // 차트영역(canvas)을 reset합니다.
 
-        2)  차트의 종류(오브젝트)를 지정합니다.
+    2)  차트의 종류(오브젝트)를 지정합니다.
 
-            var bar = New DxChartBar(config);
+        var bar = New DxChartBar(config);
 
-            //config : 차트를 그리기 위한 정보(config)
+        //config : 차트를 그리기 위한 정보(config)
 
 ```
 ---
-  1) 지정가능한 차트의 종류는 아래와 같습니다.
+1) 지정가능한 차트의 종류는 아래와 같습니다.
 
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: center;">차트 종류</th>
-        <th style="text-align: center;">오브젝트명</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="text-align: center;">activity 차트</td>
-        <td style="text-align: center;">DxChartActivity</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">막대 차트</td>
-        <td style="text-align: center;">DxChartBar</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">양극성 차트</td>
-        <td style="text-align: center;">DxChartBipolar</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">연료 차트</td>
-        <td style="text-align: center;">DxChartFuel</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">Funnel 차트</td>
-        <td style="text-align: center;">DxChartFunnel</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">간트 차트</td>
-        <td style="text-align: center;">DxChartGantt</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">게이지 차트</td>
-        <td style="text-align: center;">DxChartGauge</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">가로 막대 차트</td>
-        <td style="text-align: center;">DxChartHbar</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">히트맵 차트</td>
-        <td style="text-align: center;">DxChartHeatmap</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">말발굽 차트</td>
-        <td style="text-align: center;">DxChartHorseshoe</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">수평 진행 차트</td>
-        <td style="text-align: center;">DxChartHProgress</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">선 차트</td>
-        <td style="text-align: center;">DxChartLine</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">미터 차트</td>
-        <td style="text-align: center;">DxChartMeter</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">계기판 차트</td>
-        <td style="text-align: center;">DxChartOdo</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">조직구조 차트</td>
-        <td style="text-align: center;">DxChartOrg</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">파이 차트</td>
-        <td style="text-align: center;">DxChartPie</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">피라미드 차트</td>
-        <td style="text-align: center;">DxChartPyramid</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">레이더 차트</td>
-        <td style="text-align: center;">DxChartRadar</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">로즈 차트</td>
-        <td style="text-align: center;">DxChartRose</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">산점도 차트</td>
-        <td style="text-align: center;">DxChartRscatter</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">분산형 차트</td>
-        <td style="text-align: center;">DxChartScatter</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">세그먼트 차트</td>
-        <td style="text-align: center;">DxChartSegment</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">반원형 진행 차트</td>
-        <td style="text-align: center;">DxChartSemiCircle</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">온도계 차트</td>
-        <td style="text-align: center;">DxChartThermometer</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">트리 차트</td>
-        <td style="text-align: center;">DxChartTree</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">수직 진행 차트</td>
-        <td style="text-align: center;">DxChartVProgress</td>
-      </tr>
-      <tr>
-        <td style="text-align: center;">워터폴 차트</td>
-        <td style="text-align: center;">DxChartWaterfall</td>
-      </tr>
-    </tbody>
-  </table>
+<table>
+<thead>
+  <tr>
+    <th style="text-align: center;">차트 종류</th>
+    <th style="text-align: center;">오브젝트명</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td style="text-align: center;">activity 차트</td>
+    <td style="text-align: center;">DxChartActivity</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">막대 차트</td>
+    <td style="text-align: center;">DxChartBar</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">양극성 차트</td>
+    <td style="text-align: center;">DxChartBipolar</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">연료 차트</td>
+    <td style="text-align: center;">DxChartFuel</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">Funnel 차트</td>
+    <td style="text-align: center;">DxChartFunnel</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">간트 차트</td>
+    <td style="text-align: center;">DxChartGantt</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">게이지 차트</td>
+    <td style="text-align: center;">DxChartGauge</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">가로 막대 차트</td>
+    <td style="text-align: center;">DxChartHbar</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">히트맵 차트</td>
+    <td style="text-align: center;">DxChartHeatmap</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">말발굽 차트</td>
+    <td style="text-align: center;">DxChartHorseshoe</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">수평 진행 차트</td>
+    <td style="text-align: center;">DxChartHProgress</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">선 차트</td>
+    <td style="text-align: center;">DxChartLine</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">미터 차트</td>
+    <td style="text-align: center;">DxChartMeter</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">계기판 차트</td>
+    <td style="text-align: center;">DxChartOdo</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">조직구조 차트</td>
+    <td style="text-align: center;">DxChartOrg</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">파이 차트</td>
+    <td style="text-align: center;">DxChartPie</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">피라미드 차트</td>
+    <td style="text-align: center;">DxChartPyramid</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">레이더 차트</td>
+    <td style="text-align: center;">DxChartRadar</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">로즈 차트</td>
+    <td style="text-align: center;">DxChartRose</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">산점도 차트</td>
+    <td style="text-align: center;">DxChartRscatter</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">분산형 차트</td>
+    <td style="text-align: center;">DxChartScatter</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">세그먼트 차트</td>
+    <td style="text-align: center;">DxChartSegment</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">반원형 진행 차트</td>
+    <td style="text-align: center;">DxChartSemiCircle</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">온도계 차트</td>
+    <td style="text-align: center;">DxChartThermometer</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">트리 차트</td>
+    <td style="text-align: center;">DxChartTree</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">수직 진행 차트</td>
+    <td style="text-align: center;">DxChartVProgress</td>
+  </tr>
+  <tr>
+    <td style="text-align: center;">워터폴 차트</td>
+    <td style="text-align: center;">DxChartWaterfall</td>
+  </tr>
+</tbody>
+</table>
 
 
 ---
@@ -471,54 +463,54 @@ description:
 -   Config는 아래의 구성요소로 되어 있습니다.
 
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center;">구성요소명</th>
-      <th style="text-align: center;">설명</th>
-      <th style="text-align: center;">사용예</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center;">id</td>
-      <td style="text-align: center;">차트 canvas의 아이디</td>
-      <td style="text-align: center;">Id : canvas.id</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">elem</td>
-      <td style="text-align: center;">차트 canvas 오브젝트</td>
-      <td style="text-align: center;">elem: this.chart00.getCanvas()</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">binddataset</td>
-      <td style="text-align: center;">Nexacro의 데이터셋 오브젝트</td>
-      <td style="text-align: center;">Binddataset:</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">datachangeevent</td>
-      <td style="text-align: center;">Bind된 데이터셋의 데이터가 변경되면 차트를 다시 그릴지를 확인합니다.<br>Use: 사용 여부(true/false(default))<br>Effect: 다시 그릴 때 사용할 effect함수명(String)</td>
-      <td style="text-align: center;">datachangeevent: {Use: true, Effect: "wave"}</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">data</td>
-      <td style="text-align: center;">차트에 표시할 데이터 리스트(배열)<br>Binddataset이 세팅된 경우는 "bind" + 컬럼명을 지정하면 해당 컬럼의 데이터값이 배열로 세팅됩니다.</td>
-      <td style="text-align: center;">- ["bind:Col0", "bind:Col1"]<br>- [[10,20,30], [20,30,40]]</td>
-    </tr>
-    <tr>
-      <td style="text-align: center;">option</td>
-      <td style="text-align: center;">차트에 대한 옵션값을 세팅합니다.<br>- background, key, xaxis, yaxis, tooltip 등</td>
-      <td style="text-align: center;">{<br>xaxis: {...},<br>yaxis: {...},<br>key: {...},<br>...</td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+  <th style="text-align: center;">구성요소명</th>
+  <th style="text-align: center;">설명</th>
+  <th style="text-align: center;">사용예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td style="text-align: center;">id</td>
+  <td style="text-align: center;">차트 canvas의 아이디</td>
+  <td style="text-align: center;">Id : canvas.id</td>
+</tr>
+<tr>
+  <td style="text-align: center;">elem</td>
+  <td style="text-align: center;">차트 canvas 오브젝트</td>
+  <td style="text-align: center;">elem: this.chart00.getCanvas()</td>
+</tr>
+<tr>
+  <td style="text-align: center;">binddataset</td>
+  <td style="text-align: center;">Nexacro의 데이터셋 오브젝트</td>
+  <td style="text-align: center;">Binddataset:</td>
+</tr>
+<tr>
+  <td style="text-align: center;">datachangeevent</td>
+  <td style="text-align: center;">Bind된 데이터셋의 데이터가 변경되면 차트를 다시 그릴지를 확인합니다.<br>Use: 사용 여부(true/false(default))<br>Effect: 다시 그릴 때 사용할 effect함수명(String)</td>
+  <td style="text-align: center;">datachangeevent: {Use: true, Effect: "wave"}</td>
+</tr>
+<tr>
+  <td style="text-align: center;">data</td>
+  <td style="text-align: center;">차트에 표시할 데이터 리스트(배열)<br>Binddataset이 세팅된 경우는 "bind" + 컬럼명을 지정하면 해당 컬럼의 데이터값이 배열로 세팅됩니다.</td>
+  <td style="text-align: center;">- ["bind:Col0", "bind:Col1"]<br>- [[10,20,30], [20,30,40]]</td>
+</tr>
+<tr>
+  <td style="text-align: center;">option</td>
+  <td style="text-align: center;">차트에 대한 옵션값을 세팅합니다.<br>- background, key, xaxis, yaxis, tooltip 등</td>
+  <td style="text-align: center;">{<br>xaxis: {...},<br>yaxis: {...},<br>key: {...},<br>...</td>
+</tr>
+</tbody>
 </table>
 
 
 
-## 데이터 형식
+## 1.2.2 데이터 형식
 
 차트에 사용되는 데이터의 형식은 2차원 배열을 사용합니다.
 
-### data Property
+#### data Property
 ---
 
 차트에 사용될 데이터를 지정합니다. 데이터의 지정방식을
@@ -535,8 +527,8 @@ data: ["123,123,123,123","123,123,123,1234"] (CSV데이터의 배열)
 
 data: [[123,123,123,123],[123,123,123,1234]] (2차원 배열)
 
----
-### binddataset Property
+
+#### binddataset Property
 ---
 데이터셋의 오브젝트를 지정합니다.
 

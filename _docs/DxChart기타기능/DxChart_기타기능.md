@@ -4,23 +4,31 @@ description:
 --- 
 <link rel="stylesheet" type="text/css" href="../index.css">
 
-
+<!-- 
 > **DXChart 개발자 튜토리얼**
 >
 > **(Nexacro용)**
----
+--- -->
 
-**\[목 차\]**
+<!-- **\[목 차\]**
 각각의 목차를 클릭시 해당 페이지로 이동합니다
 
 [**5.** **기타기능** ](#기타기능)
 
 - [**기타기능**](#기타기능)
     - [convertDataset](#convertdataset)
-    - [datachangeevent](#datachangeevent)
+    - [datachangeevent](#datachangeevent) -->
 
 
-# **기타기능**
+# 5. 기타기능
+
+<details style="padding-top: 30px;">
+<summary>[목차]</summary>
+<div markdown="1">
+  - [convertDataset](#convertdataset)
+  - [datachangeevent](#datachangeevent) 
+</div>
+</details>
 
 ### convertDataset
 

@@ -3,13 +3,13 @@ title: DXChart Effect설정
 description:
 --- 
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/index.css">
-> 
+<!-- > 
 > **DXChart 개발자 튜토리얼**
 >
 > **(Nexacro용)**
----
+--- -->
 
-**\[목 차\]**
+<!-- **\[목 차\]**
 각각의 목차를 클릭시 해당 페이지로 이동합니다
 
 
@@ -28,26 +28,33 @@ description:
     - [roundRobin 및 roundRobinSequential](#roundrobin-및-roundrobinsequential)
     - [implode](#implode)
     - [explode](#explode)
-    - [차트 별 effect 종류](#차트-별-effect-종류)
+    - [차트 별 effect 종류](#차트-별-effect-종류) -->
 
 
+# 3. Effect 설정하기
+> 차트를 그릴 때 애니메이션의 종류를 지정합니다.
 
+<details style="padding-top: 10px;">
+<summary>[목차]</summary>
+<div markdown="1">
 
-  
+- [Draw](#draw)
+- [drawAni](#drawani)
+- [wave](#wave)
+- [grow](#grow)
+- [trace](#trace)
+- [unfold (toBottom)](#unfoldtobottom)
+- [unfoldFromCenterTrace (fromCenter)](#unfoldfromcentertrace-fromcenter)
+- [foldtocenter (toCenter)](#foldtocentertocenter)
+- [roundRobin 및 roundRobinSequential](#roundrobin-및-roundrobinsequential)
+- [implode](#implode)
+- [explode](#explode)
+- [차트 별 effect 종류](#차트-별-effect-종류)
 
+</div>
+</details>
 
-  
-[**4.** **Multi Chart 생성하기**](#multi-chart-생성하기)
- - [Bar 및 Line 차트](#bar-및-line-차트)
- - [Bar 및 Pie 차트](#bar-및-pie-차트)
-
-
-
-
-<br><br>
-# **Effect 설정하기**
-
-차트를 그릴 때 애니메이션의 종류를 지정합니다.
+<br/>
 
 ### Draw
 
@@ -197,28 +204,24 @@ pie.explode()
             <td>grow</td>
         </tr>
         <tr>
-            <td>bar</td>
+            <td rowspan="2">bar</td>
             <td>wave</td>
             <td>wave</td>
+            <td rowspan="2">grow</td>
+        </tr>
+        <tr>
+            <td>grow</td>
             <td>grow</td>
         </tr>
         <tr>
-            <td></td>
-            <td>grow</td>
-            <td>grow</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>bipolar</td>
+            <td rowspan="2">bipolar</td>
             <td>wave</td>
             <td>wave</td>
-            <td>grow</td>
+            <td rowspan="2">grow</td>
         </tr>
         <tr>
-            <td></td>
             <td>grow</td>
             <td>grow</td>
-            <td></td>
         </tr>
         <tr>
             <td>fuel</td>
@@ -245,16 +248,14 @@ pie.explode()
             <td>grow</td>
         </tr>
         <tr>
-            <td>hbar</td>
+            <td rowspan="2">hbar</td>
             <td>grow</td>
             <td>grow</td>
-            <td>grow</td>
+            <td rowspan="2">grow</td>
         </tr>
         <tr>
-            <td></td>
             <td>wave</td>
             <td>wave</td>
-            <td></td>
         </tr>
         <tr>
             <td>horseshoe</td>
@@ -269,34 +270,26 @@ pie.explode()
             <td>grow</td>
         </tr>
         <tr>
-            <td>line</td>
+            <td rowspan="5">line</td>
             <td>unfold</td>
             <td>unfold (toBottom)</td>
-            <td>wave(toTop)</td>
+            <td rowspan="5">wave (toTop)</td>
         </tr>
         <tr>
-            <td></td>
             <td>unfoldfromcentertrace</td>
             <td>unfoldfromcentertrace (fromCenter)</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>foldtocenter</td>
             <td>foldtocenter (toCenter)</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>trace</td>
             <td>trace (toRight)</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>wave</td>
             <td>wave (toTop)</td>
-            <td></td>
         </tr>
         <tr>
             <td>meter</td>
@@ -311,118 +304,80 @@ pie.explode()
             <td>grow</td>
         </tr>
         <tr>
-            <td>pie</td>
+            <td rowspan="4">pie</td>
             <td>grow</td>
             <td>grow</td>
-            <td>grow</td>
+            <td rowspan="4">grow</td>
         </tr>
         <tr>
-            <td></td>
             <td>explode</td>
             <td>explode</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>roundrobin</td>
             <td>roundRobin</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>roundRobinSequential</td>
             <td>roundRobinSequential</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
-            <td>implode</td>
-            <td>implode</td>
-            <td></td>
+            <td rowspan="4">pieSegment</td>
+            <td>grow</td>
+            <td>grow</td>
+            <td rowspan="4">grow</td>
         </tr>
         <tr>
-            <td>pieSegment</td>
-            <td>grow</td>
-            <td>grow</td>
-            <td>grow</td>
-        </tr>
-        <tr>
-            <td></td>
             <td>explode</td>
             <td>explode</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>roundrobin</td>
             <td>roundRobin</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>roundRobinSequential</td>
             <td>roundRobinSequential</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
-            <td>implode</td>
-            <td>implode</td>
-            <td></td>
+            <td rowspan="2">radar</td>
+            <td>grow</td>
+            <td>grow</td>
+            <td rowspan="2">grow</td>
         </tr>
         <tr>
-            <td>radar</td>
-            <td>grow</td>
-            <td>grow</td>
-            <td>grow</td>
-        </tr>
-        <tr>
-            <td></td>
             <td>trace</td>
             <td>trace</td>
-            <td></td>
         </tr>
         <tr>
-            <td>rose</td>
+            <td rowspan="3">rose</td>
             <td>grow</td>
             <td>grow</td>
-            <td>grow</td>
+            <td rowspan="3">grow</td>
         </tr>
         <tr>
-            <td></td>
             <td>roundRobin</td>
             <td>roundRobin</td>
-            <td></td>
         </tr>
         <tr>
-            <td></td>
             <td>implode</td>
             <td>implode</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>explode</td>
-            <td>explode</td>
-            <td></td>
         </tr>
         <tr>
             <td>rscatter</td>
             <td>-</td>
-            <td></td>
+            <td>-</td>
             <td>draw</td>
         </tr>
         <tr>
-            <td>scatter</td>
+            <td rowspan="2">scatter</td>
             <td>trace</td>
             <td>trace</td>
-            <td>trace</td>
+            <td rowspan="2">trace</td>
         </tr>
         <tr>
-            <td></td>
             <td>explode</td>
             <td>explode</td>
-            <td></td>
         </tr>
         <tr>
             <td>semicircularprogress</td>
@@ -481,13 +436,13 @@ pie.explode()
         <tr>
             <td>pyramid</td>
             <td>-</td>
-            <td></td>
+            <td>-</td>
             <td>draw</td>
         </tr>
         <tr>
             <td>map</td>
             <td>-</td>
-            <td></td>
+            <td>-</td>
             <td>draw</td>
         </tr>
     </tbody>

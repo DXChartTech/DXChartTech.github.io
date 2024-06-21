@@ -4,26 +4,34 @@ description:
 --- 
 
 > <link rel="stylesheet" type="text/css" href="../index.css">
-> 
+<!-- > 
 > **DXChart 개발자 튜토리얼**
 >
-> **(Nexacro용)**
----
+> **(Nexacro용)** -->
+<!-- --- -->
 
-**\[목 차\]**
+<!-- **\[목 차\]**
 각각의 목차를 클릭시 해당 페이지로 이동합니다
 
 
 
 [**4.** **Multi Chart 생성하기**](#multi-chart-생성하기)
  - [Bar 및 Line 차트](#bar-및-line-차트)
+ - [Bar 및 Pie 차트](#bar-및-pie-차트) -->
+
+
+
+
+
+# 4. Multi Chart 생성하기
+
+<details style="padding-top: 30px;">
+<summary>[목차]</summary>
+<div markdown="1">
+ - [Bar 및 Line 차트](#bar-및-line-차트)
  - [Bar 및 Pie 차트](#bar-및-pie-차트)
-
-
-
-
-
-# **Multi Chart 생성하기**
+</div>
+</details>
 
 ### Bar 및 Line 차트
 
