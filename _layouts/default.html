@@ -50,16 +50,17 @@
               {% for crumb in crumbs offset: 1 %}
                 {% if crumb != "index" %}
                   {% if forloop.last %}
-                    <li class="breadcrumb-item active" aria-current="page">
-                      <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-                    </li>
+                    <!-- <li class="breadcrumb-item active" aria-current="page">
+                      <span href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</span>
+                    </li> -->
                   {% else %}
                     {% if page.url != "/docs/" %}
                       {% if site.version_params.versioning == true and crumb == currentpageversion or crumb == site.version_params.version_dir %}
                       <!-- Don't display the version number or directory in the breadcrumb -->
                       {% else %}
-                      <li class="breadcrumb-item">
-                        <a href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>
+                      <li class="breadcrumb-item active">
+                        <!-- <a href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}{{ site.title}}{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a> -->
+                        <span>{% if crumb == "docs" %}{{ site.title}}{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</span>
                       </li>
                       {% endif %}
                     {% endif %}
@@ -96,5 +97,25 @@
       <!-- {% include footer.html %} -->
     </div>
     {% include scripts.html %}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        // 모든 breadcrumb-item 요소를 선택
+        const crumbElements = document.querySelectorAll('.breadcrumb-item');
+        crumbElements.forEach(el => {
+          // data-crumb 속성에서 인코딩된 크럼 값을 가져옴
+          let encodedCrumb = el.textContent;
+          
+          // 디코딩된 크럼 값을 변환
+          let decodedCrumb = decodeURIComponent(encodedCrumb.replace(/\+/g, ' '));
+      
+          // 하이픈을 공백으로 변환하고 첫 글자를 대문자로 변환
+          decodedCrumb = decodedCrumb.replace(/-/g, ' ').replace('.html', '').replace(/^\w/, c => c.toUpperCase());
+      
+          // 디코딩된 값을 요소의 텍스트 콘텐츠로 설정
+          el.textContent = decodedCrumb;
+        });
+      });
+      </script>
   </body>
 </html>

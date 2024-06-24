@@ -55,7 +55,7 @@ description:
 
 ![Margin](../../assets/img/image23.png)
 
-![Margin2](../../assets/img/image24.png)
+![Margin2](../../assets/img/image24.png){: width="250" height="300"}
 
   <table>
     <tr>
@@ -822,7 +822,7 @@ options: {
 
 ![Yaxis](../../assets/img/image35.png)
 
-![Yaxis2](../../assets/img/image36.png)
+![Yaxis2](../../assets/img/image36.png){: width="250" height="300"}
 
 <table style="width: 100%; text-align: center; border-collapse: collapse;">
   <thead>
