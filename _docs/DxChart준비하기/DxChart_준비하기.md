@@ -24,14 +24,14 @@ description:
 
 
 
-<h2 style="padding-top: 10px;">1.1.1 Nexacro Project 만들기</h2>
+## 1.1.1 Nexacro Project 만들기
 --- 
 
 차트를 사용하기 위한 테스트 프로젝트를 생성합니다.
 
 넥사크로스튜디오가 설치되지 않은 경우에는 설치를 먼저 진행해야 합니다.
 
-(<http://support.tobesoft.co.kr/Support/?menu=home>에서 다운로드 받아 설치할 수 있습니다.)
+(<http://support.tobesoft.co.kr>에서 다운로드 받아 설치할 수 있습니다.)
 
 1)  NexacroStudio를 기동합니다.
 
