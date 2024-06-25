@@ -28,8 +28,6 @@
           url: "docs/DxChart준비하기/DxChart_준비하기#112-차트모듈-설치하기"
         - title: "1.1.3 샘플화면 만들기"
           url: "docs/DxChart준비하기/DxChart_준비하기#113-샘플화면-만들기"
-        - title: "1.1.4 차트함수 만들기"
-          url: "docs/DxChart준비하기/DxChart_준비하기#차트함수-만들기"
     - title: "1.2 DxChart 구성요소"
       url: "docs/DxChart준비하기/DxChart_준비하기#12-dxchart-구성요소"
       children:
